@@ -29,7 +29,6 @@ switch figureName
                 set(handles.Slider_G, 'Value', slice_idx)
                 set(handles.Slider_G, 'SliderStep', [1/slice_n 1/slice_n])
             end
-%             axes(handles.Axes_G);
         end
         
     case 'S'
@@ -53,7 +52,6 @@ switch figureName
                 set(handles.Slider_S, 'Value', slice_idx)
                 set(handles.Slider_S, 'SliderStep', [1/slice_n 1/slice_n])
             end
-%             axes(handles.Axes_S);
         end
         
     case 'I'
@@ -83,7 +81,6 @@ switch figureName
                 set(handles.Slider_I, 'Value', slice_idx)
                 set(handles.Slider_I, 'SliderStep', [1/slice_n 1/slice_n])
             end
-%             axes(handles.Axes_I);
         end     
         
     case 'L'
@@ -127,44 +124,8 @@ switch figureName
                     set(handles.Slider_L, 'SliderStep', [1/slice_n 1/slice_n])
                 end
             end
-%             axes(handles.Axes_L);
         end
         
-%     case 'PH'
-%         % update Phasor Histogram figure
-%         if isfield(handles, 'imagePH')
-%             PH_matrix = handles.imagePH;
-%             
-%             PH_cmap_str = get(handles.Pop_Colormap, 'String');
-%             PH_cmap = PH_cmap_str{get(handles.Pop_Colormap, 'Value')};
-%             MaxBin = str2double(get(handles.Edit_MaxBin, 'String'));
-%             
-%             Gmin = str2double(get(handles.Edit_Gmin, 'String'));
-%             Gmax = str2double(get(handles.Edit_Gmax, 'String'));
-%             Smin = str2double(get(handles.Edit_Smin, 'String'));
-%             Smax = str2double(get(handles.Edit_Smax, 'String'));    
-%             
-%             % this way to avoid deleting ROIs
-%             if ~isfield(handles, 'im_PH')
-%                 im_PH = imshow('Parent',handles.Axes_PH, 'XData',[Gmin, Gmax],'YData',[Smin, Smax],'CData',PH_matrix);
-%                 handles.im_PH = im_PH; guidata(handles.Axes_PH,handles);
-%             else
-%                 im_PH = handles.im_PH;
-%                 im_PH.CData = PH_matrix;
-%                 im_PH.XData = [Gmin, Gmax];
-%                 im_PH.YData = [Smin, Smax];
-%             end
-%             caxis(handles.Axes_PH, [0, MaxBin]);
-%             xlim(handles.Axes_PH, [Gmin, Gmax]); ylim(handles.Axes_PH, [Smin, Smax]);
-%             set(handles.Axes_PH,'YDir','normal')
-%             colormap(handles.Axes_PH,PH_cmap);
-%             set(handles.Axes_PH,'XTick',[],'YTick',[]);
-%             hold(handles.Axes_PH, 'on')
-%             theta = linspace(0, pi, 100); radius = 0.5;
-%             plot(handles.Axes_PH, radius*cos(theta)+0.5, radius*sin(theta), 'r', 'LineWidth', line_width);
-%             line([0 1], [0 0], 'Color', 'r', 'LineWidth', line_width);
-%             hold(handles.Axes_PH, 'off')
-%         end
         
     case 'PC'
         % update Phasor Clusters figure    
@@ -198,7 +159,9 @@ switch figureName
             hold(handles.Axes_PC, 'off')
             xlim(handles.Axes_PC, [Gmin, Gmax]);
             ylim(handles.Axes_PC, [Smin, Smax]);
-            set(handles.Axes_PC,'DataAspectRatio',[1 1 1])
+            set(handles.Axes_PC,'DataAspectRatio',[1 1 1]);
+            set(handles.Axes_PC,'XColor','none');
+            set(handles.Axes_PC,'YColor','none');
         end
         
     case 'O'
