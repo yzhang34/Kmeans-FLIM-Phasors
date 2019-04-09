@@ -198,7 +198,7 @@ switch figureName
             hold(handles.Axes_PC, 'off')
             xlim(handles.Axes_PC, [Gmin, Gmax]);
             ylim(handles.Axes_PC, [Smin, Smax]);
-%             axes(handles.Axes_PC);
+            set(handles.Axes_PC,'DataAspectRatio',[1 1 1])
         end
         
     case 'O'
