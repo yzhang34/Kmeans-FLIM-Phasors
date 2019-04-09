@@ -154,8 +154,8 @@ switch figureName
             end
             plot(handles.Axes_PC, Cluster_C(:,1),Cluster_C(:,2),'kx','MarkerSize',marker_size+4,'LineWidth', line_width)
             theta = linspace(0, pi, 100); radius = 0.5;
-            plot(handles.Axes_PC, radius*cos(theta)+0.5, radius*sin(theta), 'r', 'LineWidth', line_width);
-            line([0 1], [0 0], 'Color', 'r', 'LineWidth', line_width, 'Parent', handles.Axes_PC);
+            plot(handles.Axes_PC, radius*cos(theta)+0.5, radius*sin(theta), 'k', 'LineWidth', line_width);
+            line([0 1], [0 0], 'Color', 'k', 'LineWidth', line_width, 'Parent', handles.Axes_PC);
             hold(handles.Axes_PC, 'off')
             xlim(handles.Axes_PC, [Gmin, Gmax]);
             ylim(handles.Axes_PC, [Smin, Smax]);

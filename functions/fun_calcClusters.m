@@ -7,13 +7,13 @@ function [] = fun_calcClusters(hObject, handles)
     
 %     box = msgbox('Calculating clusters, please wait...');
     
-if isfield(handles, 'GSgood') && isfield(handles, 'xyzgood')
-    GS_good = handles.GSgood;
-else
-    [GS_good, xyz_good] = fun_calcPhasors(handles);
-    handles.GSgood = GS_good; 
-    handles.xyzgood = xyz_good; 
-end
+% if isfield(handles, 'GSgood') && isfield(handles, 'xyzgood')
+%     GS_good = handles.GSgood;
+% else
+[GS_good, xyz_good] = fun_calcPhasors(handles);
+handles.GSgood = GS_good; 
+handles.xyzgood = xyz_good; 
+% end
 if ~isempty(GS_good)
     
     K = str2double(get(handles.Edit_K, 'String'));

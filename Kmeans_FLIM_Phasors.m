@@ -22,7 +22,7 @@ function varargout = Kmeans_FLIM_Phasors(varargin)
 
 % Edit the above text to modify the response to help Kmeans_FLIM_Phasors
 
-% Last Modified by GUIDE v2.5 08-Apr-2019 23:07:39
+% Last Modified by GUIDE v2.5 09-Apr-2019 18:06:07
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -217,6 +217,11 @@ function Button_LifetimeHist_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 fun_lifetimeHist(hObject, handles);
 
+function Button_ApplyFilter_Callback(hObject, eventdata, handles)
+% hObject    handle to Button_ApplyFilter (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+fun_applyFilters(hObject, handles);
 
 
 %%%%%%%%%%%% GUI Functions that Update Figures %%%%%%%%%%%%
@@ -507,6 +512,22 @@ function Edit_Rep_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
+
+function Pop_FilterSelect_Callback(hObject, eventdata, handles)
+
+function Pop_FilterSelect_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to Pop_FilterSelect (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: popupmenu controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+function Check_IntensityFilter_Callback(hObject, eventdata, handles)
+
 
 %%%%%%%%%%%% GUI Functions for Sliders %%%%%%%%%%%%
 
