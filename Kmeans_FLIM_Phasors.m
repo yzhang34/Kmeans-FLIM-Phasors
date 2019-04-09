@@ -1,35 +1,35 @@
-function varargout = PM_FLIM_GUI(varargin)
-% PM_FLIM_GUI MATLAB code for PM_FLIM_GUI.fig
-%      PM_FLIM_GUI, by itself, creates a new PM_FLIM_GUI or raises the existing
+function varargout = Kmeans_FLIM_Phasors(varargin)
+% Kmeans_FLIM_Phasors MATLAB code for Kmeans_FLIM_Phasors.fig
+%      Kmeans_FLIM_Phasors, by itself, creates a new Kmeans_FLIM_Phasors or raises the existing
 %      singleton*.
 %
-%      H = PM_FLIM_GUI returns the handle to a new PM_FLIM_GUI or the handle to
+%      H = Kmeans_FLIM_Phasors returns the handle to a new Kmeans_FLIM_Phasors or the handle to
 %      the existing singleton*.
 %
-%      PM_FLIM_GUI('CALLBACK',hObject,eventData,handles,...) calls the local
-%      function named CALLBACK in PM_FLIM_GUI.M with the given input arguments.
+%      Kmeans_FLIM_Phasors('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in Kmeans_FLIM_Phasors.M with the given input arguments.
 %
-%      PM_FLIM_GUI('Property','Value',...) creates a new PM_FLIM_GUI or raises the
+%      Kmeans_FLIM_Phasors('Property','Value',...) creates a new Kmeans_FLIM_Phasors or raises the
 %      existing singleton*.  Starting from the left, property value pairs are
-%      applied to the GUI before PM_FLIM_GUI_OpeningFcn gets called.  An
+%      applied to the GUI before Kmeans_FLIM_Phasors_OpeningFcn gets called.  An
 %      unrecognized property name or invalid value makes property application
-%      stop.  All inputs are passed to PM_FLIM_GUI_OpeningFcn via varargin.
+%      stop.  All inputs are passed to Kmeans_FLIM_Phasors_OpeningFcn via varargin.
 %
 %      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
 %      instance to run (singleton)".
 %
 % See also: GUIDE, GUIDATA, GUIHANDLES
 
-% Edit the above text to modify the response to help PM_FLIM_GUI
+% Edit the above text to modify the response to help Kmeans_FLIM_Phasors
 
-% Last Modified by GUIDE v2.5 28-Mar-2019 22:52:47
+% Last Modified by GUIDE v2.5 08-Apr-2019 23:07:39
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
 gui_State = struct('gui_Name',       mfilename, ...
                    'gui_Singleton',  gui_Singleton, ...
-                   'gui_OpeningFcn', @PM_FLIM_GUI_OpeningFcn, ...
-                   'gui_OutputFcn',  @PM_FLIM_GUI_OutputFcn, ...
+                   'gui_OpeningFcn', @Kmeans_FLIM_Phasors_OpeningFcn, ...
+                   'gui_OutputFcn',  @Kmeans_FLIM_Phasors_OutputFcn, ...
                    'gui_LayoutFcn',  [] , ...
                    'gui_Callback',   []);
 if nargin && ischar(varargin{1})
@@ -43,21 +43,21 @@ else
 end
 % End initialization code - DO NOT EDIT
 
-% --- Executes just before PM_FLIM_GUI is made visible.
-function PM_FLIM_GUI_OpeningFcn(hObject, eventdata, handles, varargin)
+% --- Executes just before Kmeans_FLIM_Phasors is made visible.
+function Kmeans_FLIM_Phasors_OpeningFcn(hObject, eventdata, handles, varargin)
 % This function has no output args, see OutputFcn.
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-% varargin   command line arguments to PM_FLIM_GUI (see VARARGIN)
+% varargin   command line arguments to Kmeans_FLIM_Phasors (see VARARGIN)
 
-% Choose default command line output for PM_FLIM_GUI
+% Choose default command line output for Kmeans_FLIM_Phasors
 handles.output = hObject;
 
 % Update handles structure
 guidata(hObject, handles);
 
-% UIWAIT makes PM_FLIM_GUI wait for user response (see UIRESUME)
+% UIWAIT makes Kmeans_FLIM_Phasors wait for user response (see UIRESUME)
 % uiwait(handles.Figure_PM_FLIM);
 
 
@@ -83,7 +83,7 @@ fun_colorbarHSV2RGB(handles)
 
 
 % --- Outputs from this function are returned to the command line.
-function varargout = PM_FLIM_GUI_OutputFcn(hObject, eventdata, handles) 
+function varargout = Kmeans_FLIM_Phasors_OutputFcn(hObject, eventdata, handles) 
 % varargout  cell array for returning output args (see VARARGOUT);
 % hObject    handle to figure
 % eventdata  reserved - to be defined in a future version of MATLAB
