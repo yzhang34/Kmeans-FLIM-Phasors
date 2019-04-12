@@ -1,7 +1,11 @@
 function [] = fun_calcClusters(hObject, handles)
 %FUN_CALCCLUSTERS Summary of this function goes here
 %   This function is used to calculate k-means clusters
-
+%
+%   Author: Yide Zhang
+%   Email: yzhang34@nd.edu
+%   Date: April 12, 2019
+%   Copyright: University of Notre Dame, 2019
 
     
     

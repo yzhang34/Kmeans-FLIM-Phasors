@@ -1,6 +1,11 @@
 function [] = fun_calcOverlap(hObject, handles)
 %FUN_CALCOVERLAP Summary of this function goes here
 %   This function is used to calculate the overlap images
+%
+%   Author: Yide Zhang
+%   Email: yzhang34@nd.edu
+%   Date: April 12, 2019
+%   Copyright: University of Notre Dame, 2019
 
 if isfield(handles, 'Clusteridx') && isfield(handles, 'xyzgood')
     

@@ -1,6 +1,11 @@
 function [] = fun_exportColorTIF( data, path )
 %FUN_EXPORTIMAGES Summary of this function goes here
 %   Detailed explanation goes here
+%
+%   Author: Yide Zhang
+%   Email: yzhang34@nd.edu
+%   Date: April 12, 2019
+%   Copyright: University of Notre Dame, 2019
 
 % scale the data (0-1) to accompany 8-bit resolution
 data = double(data);

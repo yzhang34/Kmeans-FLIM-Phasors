@@ -1,6 +1,12 @@
 function [ ] = fun_applyFilters(hObject, handles)
 %FUN_CALCPHASORHIST Summary of this function goes here
 %   This function is used to calculate phasors
+%
+%   Author: Yide Zhang
+%   Email: yzhang34@nd.edu
+%   Date: April 12, 2019
+%   Copyright: University of Notre Dame, 2019
+
 
 if isfield(handles, 'imageG_backup') && isfield(handles, 'imageS_backup') && isfield(handles, 'imageI_backup')
    

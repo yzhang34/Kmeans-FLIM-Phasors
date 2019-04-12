@@ -1,6 +1,12 @@
 function [] = fun_updateLimRange(handles, update_mode)
 %FUN_LIMIT2RANGE Summary of this function goes here
 %   Detailed explanation goes here
+%
+%   Author: Yide Zhang
+%   Email: yzhang34@nd.edu
+%   Date: April 12, 2019
+%   Copyright: University of Notre Dame, 2019
+
 
 if isfield(handles, 'imageI')
     image_stack = handles.imageI;

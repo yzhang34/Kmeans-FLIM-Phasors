@@ -1,6 +1,11 @@
 function [GS_good, xyz_good] = fun_calcPhasors(handles)
 %FUN_CALCPHASORHIST Summary of this function goes here
 %   This function is used to calculate phasors
+%
+%   Author: Yide Zhang
+%   Email: yzhang34@nd.edu
+%   Date: April 12, 2019
+%   Copyright: University of Notre Dame, 2019
 
 if isfield(handles, 'imageG') && isfield(handles, 'imageS') && isfield(handles, 'imageI')
     G_stack = handles.imageG;
@@ -17,17 +22,8 @@ if isfield(handles, 'imageG') && isfield(handles, 'imageS') && isfield(handles, 
         Gmax = str2double(get(handles.Edit_Gmax, 'String'));
         Smin = str2double(get(handles.Edit_Smin, 'String'));
         Smax = str2double(get(handles.Edit_Smax, 'String'));        
-        
-%         GS_grid = str2double(get(handles.Edit_Grid, 'String'));
-%         G_array = linspace(Gmin, Gmax, GS_grid);
-%         S_array = linspace(Smin, Smax, GS_grid);
-%         PH_matrix = zeros(GS_grid, GS_grid);
-
+       
         % use a matrix to store phasor information for the whole volume/frame
-        
-        % n_good = numel(find(((I_stack <= Imax) & (I_stack >= Imin)) &...
-        %     ((G_stack <= Gmax) & (G_stack >= Gmin)) & ...
-        %     ((S_stack <= Smax) & (S_stack >= Smin))));
         n_good = numel(find(((I_stack < Imax) & (I_stack > Imin)) &...
                     ((G_stack < Gmax) & (G_stack > Gmin)) & ...
                     ((S_stack < Smax) & (S_stack > Smin))));
@@ -49,11 +45,7 @@ if isfield(handles, 'imageG') && isfield(handles, 'imageS') && isfield(handles, 
                     if iI <= Imax && iI >= Imin &&...
                             iG <= Gmax && iG >= Gmin &&...
                             iS <= Smax && iS >= Smin
-%                         [~, G_idx] = min(abs(iG-G_array));
-%                         [~, S_idx] = min(abs(iS-S_array));
-                        % row = S, col = G
-%                         PH_matrix(S_idx, G_idx) = PH_matrix(S_idx, G_idx)+1;
-
+                        
                         % reserve data for K-means clustering
                         G_good(i_good) = iG;
                         S_good(i_good) = iS;
@@ -66,16 +58,9 @@ if isfield(handles, 'imageG') && isfield(handles, 'imageS') && isfield(handles, 
             end
             
         end
-        
+       
         GS_good = [G_good, S_good];
         xyz_good = [x_good, y_good, z_good];
-%         
-%         set(handles.Edit_MaxBin, 'String', num2str(max(PH_matrix(:))));
-        
-%         handles.imagePH = PH_matrix;
-%         handles.GSgood = GS_good; 
-%         handles.xyzgood = xyz_good; 
-%         guidata(hObject,handles) 
         
         close(hwb_progress);
 
@@ -89,10 +74,6 @@ else
     GS_good = [];
     xyz_good = [];
 end
-
-
-% fun_updateFigures(handles, -1, 'PH');
-
 
 end
 

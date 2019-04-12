@@ -1,6 +1,11 @@
 function [ ] = fun_show3Dstack(ax, slider, text_slice, image_stack, slice_idx)
 %FUN_SHOW3DSTACK Summary of this function goes here
 %   Detailed explanation goes here
+%
+%   Author: Yide Zhang
+%   Email: yzhang34@nd.edu
+%   Date: April 12, 2019
+%   Copyright: University of Notre Dame, 2019
 
 slice_n = size(image_stack, 3);
 

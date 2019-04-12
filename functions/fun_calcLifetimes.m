@@ -1,14 +1,17 @@
 function [] = fun_calcLifetimes(hObject, handles)
 %FUN_CALCLIFETIMES Summary of this function goes here
 %   This function is used to calculate lifetimes
+%
+%   Author: Yide Zhang
+%   Email: yzhang34@nd.edu
+%   Date: April 12, 2019
+%   Copyright: University of Notre Dame, 2019
 
 if isfield(handles, 'imageG') && isfield(handles, 'imageS')
     G_stack = handles.imageG;
     S_stack = handles.imageS;
     if isequal(size(G_stack),size(S_stack))
         ModFreq = str2double(get(handles.Edit_ModFreq, 'String'));
-        % TauP=(Pos(1,2)/Pos(1,1))/(2*pi*Freq);
-        % TauM=sqrt((1/(Pos(1,2)^2+Pos(1,1)^2))-1)/(2*pi*Freq);
         L_stack = S_stack./G_stack/(2*pi*ModFreq);
         MaxL = str2double(get(handles.Edit_MaxL, 'String'));
         MinL = str2double(get(handles.Edit_MinL, 'String'));

@@ -1,6 +1,11 @@
 function [ filtered_stack ] = fun_filterSelect( raw_stack, mode )
 %FUN_FILTERSELECT Summary of this function goes here
 %   Detailed explanation goes here
+%
+%   Author: Yide Zhang
+%   Email: yzhang34@nd.edu
+%   Date: April 12, 2019
+%   Copyright: University of Notre Dame, 2019
 
 [n_x, n_y, n_z] = size(raw_stack);
 filtered_stack = zeros(n_x, n_y, n_z);
