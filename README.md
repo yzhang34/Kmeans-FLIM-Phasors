@@ -10,7 +10,7 @@ git clone https://github.com/yzhang34/Kmeans-FLIM-Phasors.git
 ```
 - Run the file 'Kmeans_FLIM_Phasors.m' with Matlab
 
-## Examples
+## Example
 - Load the phasor (G, S) and intensity files into the program. Supported formats include TIFF and CSV files.
 ![Load Files](tutorials/load_files.gif)
 
