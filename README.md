@@ -3,12 +3,21 @@
 This is the repository for the open-source program described in "Automatic segmentation of intravital fluorescence microscopy images by K-means clustering of FLIM phasors" by Yide Zhang et al.
 
 ## Installation
-- Install Matlab
+### Option 1
+- **This option requires a Matlab license**
+- Install [Matlab](https://www.mathworks.com/products/matlab.html) on your computer
 - Clone this repository:
 ```
 git clone https://github.com/yzhang34/Kmeans-FLIM-Phasors.git
 ```
 - Run the file 'Kmeans_FLIM_Phasors.m' with Matlab
+
+### Option 2
+- **This option does not require a Matlab license**
+- Execute "MyAppInstaller_web.exe" in the "installer" directory
+- Follow the instructions to install the program
+- Matlab running environment will be automatically downloaded and installed
+- Once the installation is compele, the program can be started with the icon on your Desktop
 
 ## Example
 - Load the phasor (G, S) and intensity files into the program. Supported formats include TIFF and CSV files.
