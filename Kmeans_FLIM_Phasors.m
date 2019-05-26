@@ -179,7 +179,10 @@ function Button_CalcPC_Callback(hObject, eventdata, handles)
 % hObject    handle to Button_CalcPC (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+tic
 fun_calcClusters(hObject, handles);
+clusterTime = toc;
+set(handles.Text_ClusterTime, 'string', ['Time (s): ', num2str(clusterTime)]);
 
 function Button_CalcO_Callback(hObject, eventdata, handles)
 % hObject    handle to Button_CalcO (see GCBO)
@@ -652,3 +655,20 @@ function Button_ExportO_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 fun_exportFigures(handles, 'O');
+
+
+%%%%%%%%%%%% GUI Functions for Displaying Segmented Results %%%%%%%%%%%%
+
+function Button_DisplaySegments_Callback(hObject, eventdata, handles)
+% hObject    handle to Button_DisplaySegments (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+fun_dispSegChannels(handles);
+
+
+% --- Executes on button press in Button_ExportSegments.
+function Button_ExportSegments_Callback(hObject, eventdata, handles)
+% hObject    handle to Button_ExportSegments (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+fun_exportSegChannels(handles);
