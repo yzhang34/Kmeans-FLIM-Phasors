@@ -67,11 +67,11 @@ if isfield(handles, 'Clusteridx') && isfield(handles, 'xyzgood')
             cc_I = hsv2rgb([map_hue map_saturation map_value]);
             for i_good = 1:n_good
                 % pixel with HSV
-%                 disp_stack(x_iK(i_good), y_iK(i_good), :, z_iK(i_good)) = cc_I(i_good, :);
+                disp_stack(x_iK(i_good), y_iK(i_good), :, z_iK(i_good)) = cc_I(i_good, :);
                 % pixel with pure color
 %                 disp_stack(x_iK(i_good), y_iK(i_good), :, z_iK(i_good)) = cc(iK, :);
                 % pixel with raw intensity gray-scale
-                disp_stack(x_iK(i_good), y_iK(i_good), :, z_iK(i_good)) = I_stack(x_iK(i_good), y_iK(i_good), :, z_iK(i_good));
+%                 disp_stack(x_iK(i_good), y_iK(i_good), :, z_iK(i_good)) = I_stack(x_iK(i_good), y_iK(i_good), :, z_iK(i_good));
             end
             
             cluster_filename = [filename(1:end-4), num2str(iK), '.tif'];
