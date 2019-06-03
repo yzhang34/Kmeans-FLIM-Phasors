@@ -32,9 +32,13 @@ git clone https://github.com/yzhang34/Kmeans-FLIM-Phasors.git
 - Specify K-means clustering paramters: K, distance metric, and replicate times. Perform the clustering algorithm.
 ![Clustering](tutorials/clustering.gif)
 
-- Obtain the segmentation result by calculating the overlapping pixels corresponding to the clustered phasors. All the images in the program can be exported.
+- Obtain the segmentation result by calculating the overlapping pixels corresponding to the clustered phasors. The segmented images can be shown separately. All the images in the program, including the segmented images, can be exported.
 ![Overlap](tutorials/overlap_export.gif)
 
+- As an example, the overlap image, as well as the separate segmented images, can be exported as TIFF files:
+![OverlapTIF](tutorials/imageOverlapCluster.jpg)
+![Seg1TIF](tutorials/clustered_segment1.jpg)
+![Seg2TIF](tutorials/clustered_segment2.jpg)
 
 ## Applications
 - Save the phasor and intensity images to TIFF or CSV files with your exisiting FLIM system.
