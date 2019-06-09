@@ -17,7 +17,7 @@ git clone https://github.com/yzhang34/Kmeans-FLIM-Phasors.git
 - Execute "MyAppInstaller_web.exe" in the "installer" directory
 - Follow the instructions to install the program
 - Matlab running environment will be automatically downloaded and installed
-- Once the installation is compele, the program can be started with the icon on your Desktop
+- Once the installation is complete, the program can be started with the icon on your Desktop
 
 ## Example
 - Load the phasor (G, S) and intensity files into the program. Supported formats include TIFF and CSV files.
