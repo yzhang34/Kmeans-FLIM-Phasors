@@ -3,7 +3,7 @@
 This is the repository for the open-source program described in 
 >[Y. Zhang et al., “Automatic segmentation of intravital fluorescence microscopy images by K-means clustering of FLIM phasors,” Opt. Lett., 2019.](https://www.osapublishing.org/DirectPDFAccess/E13D0D36-C32E-9AF5-30CAF2B414B89A7D_ads369247.pdf?da=1&adsid=369247&journal=3&seq=0&mobile=no)
 ```latex
-@article{Zhang2017,
+@article{Zhang2019,
   author = {Zhang, Yide and Hato, Takashi and Dagher, Pierre C. and Nichols, Evan L. and Smith, Cody J. and Dunn, Kenneth W.  and Howard, Scott S.},
   journal = {Optics Letters},
   title = {{Automatic segmentation of intravital fluorescence microscopy images by K-means clustering of FLIM phasors}},
