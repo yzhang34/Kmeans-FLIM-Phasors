@@ -1,7 +1,7 @@
 # Kmeans-FLIM-Phasors
 
 This is the repository for the open-source program described in 
->[Y. Zhang et al., “Automatic segmentation of intravital fluorescence microscopy images by K-means clustering of FLIM phasors,” Opt. Lett., 2019.](https://www.osapublishing.org/ol/abstract.cfm?uri=ol-44-16-3928)
+>[Y. Zhang et al., “Automatic segmentation of intravital fluorescence microscopy images by K-means clustering of FLIM phasors,” Opt. Lett., vol. 44, no. 16, p. 3928, Aug. 2019.](https://www.osapublishing.org/ol/abstract.cfm?uri=ol-44-16-3928)
 ```latex
 @article{Zhang2019,
   author = {Zhang, Yide and Hato, Takashi and Dagher, Pierre C. and Nichols, Evan L. and Smith, Cody J. and Dunn, Kenneth W. and Howard, Scott S.},
@@ -16,8 +16,6 @@ This is the repository for the open-source program described in
   year = {2019}
 }
 ```
-
-
 
 ## Installation
 ### Option 1
